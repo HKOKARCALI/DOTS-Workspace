@@ -11,6 +11,7 @@ public class SpawnerController : MonoBehaviour
     [SerializeField] int gridSize;
     [SerializeField] int spread;
     [SerializeField] Vector2 speedRange = new Vector2(2,10);
+    [SerializeField] Vector2 lifetimeRange = new Vector2(10,60);
     private BlobAssetStore blobAsset;
 
     private void Start(){
@@ -29,6 +30,9 @@ public class SpawnerController : MonoBehaviour
                 float3 position = new float3(x * spread, 0f, z * spread);
                 entityManager.SetComponentData(instance, new Translation{Value = position});
                 entityManager.SetComponentData(instance, new Destination{Value = position});
+
+                float lifetime = UnityEngine.Random.Range(lifetimeRange.x,lifetimeRange.y);
+                entityManager.SetComponentData(instance, new Lifetime{Value = lifetime});
 
                 float speed = UnityEngine.Random.Range(speedRange.x,speedRange.y);
                 entityManager.SetComponentData(instance, new MovementSpeed{Value = speed});
