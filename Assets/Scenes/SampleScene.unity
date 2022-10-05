@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd903b63ff9cad344ab578224d30c795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personPrefab: {fileID: 4610061591711978421, guid: 8535218200fdef34aad254503b6dca6e, type: 3}
+  personPrefab: {fileID: 2369394998738605847, guid: 4730e9f0c5828e64bac090fa5d80d2a2, type: 3}
   gridSize: 100
   spread: 5
   speedRange: {x: 2, y: 10}
